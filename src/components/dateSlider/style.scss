@@ -1,0 +1,173 @@
+.slider {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+
+  @media screen and (max-width: 924px) {
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 12px;
+  }
+
+  gap: 105px;
+  padding: 25px;
+
+  &--container {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    gap: 13px;
+  }
+
+  &--time-section {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+  }
+
+  &--secondary-text {
+    @media screen and (max-width: 770px) {
+      font-size: 8px;
+    }
+    @media screen and (max-width: 400px) {
+      font-size: 6px;
+    }
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+
+    color: #999;
+  }
+
+  &--black-text {
+    @media screen and (max-width: 770px) {
+      font-size: 8px;
+    }
+    @media screen and (max-width: 400px) {
+      font-size: 6px;
+    }
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+
+    color: #333;
+  }
+
+  &--date-line-section {
+    display: flex;
+
+    height: 10px;
+    width: 100%;
+
+    border-radius: 100px;
+    background-color: #EDF1F8;
+  }
+
+  &--handle-pickers {
+    &--left {
+      margin-top: -7px;
+      margin-right: auto;
+      cursor: pointer;
+    }
+    &--right {
+      margin-top: -7px;
+      margin-left: auto;
+      cursor: pointer;
+    }
+  }
+
+  &--line-between-picks {
+    position: inherit;
+    height: 6px;
+    width: 100%;
+    margin: 0 -0.4px;
+
+    background: #5CADEA;
+  }
+}
+
+.date-type-switcher {
+  @media screen and (max-width: 900px) {
+    align-items: center;
+  }
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+
+  &--selected-true {
+    color: #0167B3;
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+
+    cursor: pointer;
+    white-space: nowrap;
+
+  }
+  &--selected-false {
+    color: #D3DCF1;
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+
+    cursor: pointer;
+    white-space: nowrap;
+  }
+}
+
+.tooltip {
+  position: absolute;
+
+  padding: 6px 14px;
+  max-width: 76px;
+  width: 100%;
+
+  background-color: #fff;
+  border-radius: 20px;
+  filter: drop-shadow(0px 5px 15px rgba(14, 88, 143, 0.20));
+
+  &--left {
+    @media screen and (max-width: 640px) {
+      margin-top: -50px;
+      margin-left: -26px;
+    }
+    margin-top: -65px;
+    margin-left: -45px;
+  }
+
+  &--right {
+    @media screen and (max-width: 640px) {
+      margin-left: -26px;
+    }
+    margin-left: -45px;
+  }
+
+  &--text-time {
+    @media screen and (max-width: 770px) {
+      font-size: 10px;
+      line-height: 16px;
+    }
+    @media screen and (max-width: 400px) {
+      font-size: 8px;
+      line-height: 14px;
+    }
+
+    color: #0167B3;
+    text-align: center;
+    white-space: pre-wrap;
+
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+}
